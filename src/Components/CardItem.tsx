@@ -42,7 +42,7 @@ const CardItem: React.FC<Props> = ({ data, index }) => {
 	});
 
 	return (
-		<Card sx={{ width: '400px', padding: '10px', margin: '10px', justifyContent: 'flex-start' }}>
+		<Card className='Card'>
 			<CardHeader
 				action={<IconButton aria-label='settings'></IconButton>}
 				title={data.name}

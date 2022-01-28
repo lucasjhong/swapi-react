@@ -27,7 +27,6 @@ const Starships = (props: Props) => {
 				// Case get page, set next page if it exists
 				case 'get': {
 					const res: any = await Swapi.getStarships(nextPage);
-					console.log(res);
 					setData(res.results);
 					setNextAvailable(res.next);
 					setNextPage(nextPage + 1);
@@ -37,7 +36,6 @@ const Starships = (props: Props) => {
 				// Case search, search input
 				case 'search': {
 					const res: any = await Swapi.searchStarships(searchInput);
-					console.log(res);
 					setData(res.results);
 					setNextAvailable(res.next);
 					break;
@@ -66,6 +64,7 @@ const Starships = (props: Props) => {
 				variant='standard'
 				sx={{ width: '40%' }}
 				onChange={handleChange}
+				className='TextField'
 			/>
 			<div className='button-layout'>
 				<Button variant='contained' onClick={() => fetchData('search')}>
