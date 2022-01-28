@@ -1,0 +1,26 @@
+.main {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	.button-layout {
+		width: 40%;
+		margin: 5%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: 'center';
+	}
+
+	.card-layout {
+		margin: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+	}
+}

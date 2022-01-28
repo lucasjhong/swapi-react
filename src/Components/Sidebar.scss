@@ -1,0 +1,57 @@
+$activeColor: rgba(255, 255, 255, 0.16);
+$background: #262626;
+
+.sidebar {
+	position: fixed;
+	height: 100%;
+	width: 250px;
+	top: 0;
+	left: -250px;
+	background-color: $background;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+	&.active {
+		left: 0;
+	}
+}
+
+.menu-icon {
+	position: fixed;
+	cursor: pointer;
+	margin: 30px;
+	transform: scale(1.4);
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	height: 60px;
+	padding: 5%;
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	align-items: center;
+	justify-content: flex-start;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		background-color: $activeColor;
+	}
+
+	&.sidebar-top {
+		height: 90px;
+		margin-bottom: 40px;
+	}
+
+	&.active {
+		background-color: $activeColor;
+	}
+}
+
+.icon {
+	margin: 20px;
+}
